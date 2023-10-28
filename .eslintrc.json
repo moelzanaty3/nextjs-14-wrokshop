@@ -1,0 +1,26 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:import/recommended", "prettier"],
+  "plugins": ["unused-imports"],
+  "rules": {
+    // TODO: due to a problem of path aliasing, this rule is only showing warnings
+    "import/no-unresolved": "warn",
+    "import/order": [
+      "error",
+      {
+        "newlines-between": "always",
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "external",
+            "position": "after"
+          }
+        ],
+        "distinctGroup": false
+      }
+    ],
+    "import/newline-after-import": ["error", { "count": 1 }],
+    "@typescript-eslint/no-unused-vars": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": ["warn", { "vars": "all", "varsIgnorePattern": "^_", "args": "after-used", "argsIgnorePattern": "^_" }]
+  }
+}
