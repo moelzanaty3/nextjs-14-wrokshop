@@ -7,7 +7,7 @@ const users = [
     email: 'user@nextmail.com',
     password: '123456',
   },
-];
+]
 
 const customers = [
   {
@@ -70,7 +70,7 @@ const customers = [
     email: 'balazs@orban.com',
     image_url: '/customers/balazs-orban.png',
   },
-];
+]
 
 const invoices = [
   {
@@ -163,7 +163,7 @@ const invoices = [
     status: 'paid',
     date: '2022-06-05',
   },
-];
+]
 
 const revenue = [
   { month: 'Jan', revenue: 2000 },
@@ -178,11 +178,11 @@ const revenue = [
   { month: 'Oct', revenue: 2800 },
   { month: 'Nov', revenue: 3000 },
   { month: 'Dec', revenue: 4800 },
-];
+]
 
 module.exports = {
   users,
   customers,
   invoices,
   revenue,
-};
+}

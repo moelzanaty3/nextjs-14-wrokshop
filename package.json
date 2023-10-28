@@ -3,7 +3,8 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write app/**/*.{js,ts,tsx}"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
