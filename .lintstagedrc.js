@@ -1,7 +1,3 @@
-const path = require('path')
-
-const buildEslintCommand = (filenames) => `next lint --fix --file ${filenames.map((f) => path.relative(process.cwd(), f)).join(' --file ')}`
-
 module.exports = {
-  '*.{js,jsx,ts,tsx}': [buildEslintCommand, 'pnpm run format'],
+  '*.{js,jsx,ts,tsx}': ['pnpm run lint', 'pnpm run prettier'],
 }
