@@ -3,12 +3,12 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "start": "next start",
     "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
-    "prettier": "prettier --write --ignore-unknown .",
-    "prettier:check": "prettier --check --ignore-unknown .",
+    "lint.staged": "lint-staged",
     "prepare": "husky install",
-    "lint.staged": "lint-staged"
+    "prettier": "prettier --write .",
+    "prettier:check": "prettier --check --ignore-unknown .",
+    "start": "next start"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
@@ -27,11 +27,12 @@
     "zod": "^3.22.2"
   },
   "devDependencies": {
-    "@vercel/style-guide": "^5.0.1",
     "@types/bcrypt": "^5.0.1",
     "@types/react": "18.2.21",
     "@types/react-dom": "18.2.14",
+    "@vercel/style-guide": "^5.0.1",
     "dotenv": "^16.3.1",
+    "eslint": "8.52.0",
     "eslint-config-next": "^14.0.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-import": "^2.29.0",
@@ -39,7 +40,6 @@
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
-    "eslint": "8.52.0",
     "prettier-plugin-tailwindcss": "0.5.4"
   },
   "engines": {
