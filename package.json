@@ -2,7 +2,7 @@
   "private": true,
   "scripts": {
     "build": "next build",
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "lint": "eslint . --ext .cjs,.js,.jsx,.mjs,.ts,.tsx",
     "lint.staged": "lint-staged",
     "prepare": "husky install",
