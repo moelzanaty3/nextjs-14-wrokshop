@@ -1,3 +1,43 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:import/errors",
+    "plugin:import/warnings",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:jsx-a11y/recommended"
+  ],
+  "plugins": ["import", "@typescript-eslint", "prettier", "jsx-a11y"],
+  "rules": {
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          "parent",
+          "sibling",
+          "index"
+        ],
+        "newlines-between": "always"
+      }
+    ],
+    "import/newline-after-import": "error",
+    "import/no-duplicates": "error",
+    "import/no-commonjs": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
+    "@typescript-eslint/no-unused-expressions": "error",
+    "no-unused-vars": "off",
+    "no-console": "warn",
+    "no-eval": "error",
+    "curly": "error",
+    "prettier/prettier": "error",
+    "jsx-a11y/accessible-emoji": "error",
+    "no-magic-numbers": ["error", { "ignore": [0, 1] }]
+  }
 }
